@@ -25,6 +25,8 @@ export default async function RecipeDetails({ params }) {
             style={{ objectFit: "cover" }} // Ensure the image covers the container
             alt={recipe.name}
             className="w-full h-full rounded-lg shadow-lg"
+            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+            priority
           />
         </div>
 

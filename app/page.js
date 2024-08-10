@@ -27,7 +27,7 @@ export default async function Home() {
             key={index}
             className="bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden transition-transform transform hover:scale-105"
           >
-            <Link href={`recipes/${recipe.id}`}>
+            <Link href={`/recipes/${recipe.id}`}>
               <div className="relative w-full h-40">
                 <Image
                   src={recipe.image}
@@ -35,6 +35,8 @@ export default async function Home() {
                   style={{ objectFit: "cover" }}
                   alt={recipe.name}
                   className="w-full h-full"
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
+                  priority={index === 0}
                 />
               </div>
               <div className="p-4">
